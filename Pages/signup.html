@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            body {
+                background: linear-gradient(to right, #80bfff, #0073e6); 
+                font-family: 'Times New Roman', Times, serif, sans-serif;
+                margin: 0;
+                overflow: hidden; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh; 
+                position: relative;
+            }
+    
+            .star {
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); 
+                animation: float 4s infinite; 
+            }
+    
+            .star1 {
+                width: 120px;
+                height: 120px;
+                top: 20%;
+                left: 5%;
+            }
+    
+            .star2 {
+                width: 80px;
+                height: 80px;
+                top: 40%;
+                left: 70%;
+            }
+    
+            .star3 {
+                width: 70px;
+                height: 70px;
+                top: 80%;
+                left: 20%;
+            }
+    
+           
+    
+            .star5 {
+                width: 90px;
+                height: 90px;
+                top: 80%;
+                left: 90%;
+            }
+    
+           
+    
+           
+    
+            
+        </style>
+</head>
+
+<body class="background-radial-gradient" >
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+    
+                    <div class="mx-4">
+                        <div class="my-2 mx-11">
+            <div class="grid grid-cols-2" >
+                
+                <form action="/signupuser" method="post" >
+                    <div>
+                        <div class="my-8 mx-9">
+                            <p class="text-center text-5xl font-semibold leading-10 text-gray-900">User Registration
+                            </p>
+
+                            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                                <!-- <div class="col-span-full row-span-2">
+                                    <label for="photo"
+                                        class="block text-lg font-medium leading-6 text-gray-900">Photo</label>
+                                    <div class="mt-2 flex items-center gap-x-3">
+                                        <label for="fileInput" class="cursor-pointer">
+                                            <svg class="h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="ml-2 text-gray-700">Choose a file</span>
+                                        </label>
+                                        <input id="fileInput" type="file" class="hidden"
+                                            onchange="handleFileChange(this)">
+                                    </div>
+                                </div> -->
+
+                                <div class="sm:col-span-3">
+                                    <label for="first-name"
+                                        class="block text-lg font-medium leading-6 text-gray-900">First
+                                        name</label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input type="text" name="firstname" id="first-name" required
+                                            autocomplete="given-name"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-3">
+                                    <label for="last-name"
+                                        class="block text-lg font-medium leading-6 text-gray-900">Last
+                                        name</label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input type="text" name="lastname" id="last-name" required
+                                            autocomplete="family-name"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="first-name"
+                                        class="block text-lg font-medium leading-6 text-gray-900">Phone</label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input type="number" name="phone" id="first-name" required
+                                            autocomplete="given-name"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="city"
+                                        class="block text-lg font-medium leading-6 text-gray-900">City</label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input type="text" name="city" id="city" required autocomplete="address-level2"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="region" class="block text-lg font-medium leading-6 text-gray-900">State
+                                        /
+                                        Province</label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input type="text" name="state" id="state" required
+                                            autocomplete="address-level1"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-4">
+                                    <label for="email" class="block text-lg font-medium leading-6 text-gray-900">Email
+                                        address</label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input id="email" name="email" type="email" required autocomplete="email"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="region"
+                                        class="block text-lg font-medium leading-6 text-gray-900">Password
+                                    </label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input type="password" name="password" id="state" required
+                                            autocomplete="address-level1"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="col-span-6">
+                                    <label for="street-address"
+                                        class="block text-lg font-medium leading-6 text-gray-900">
+                                        Address</label>
+                                    <div class="mt-2 border-2 rounded-md">
+                                        <input type="text" name="address" id="street-address" required
+                                            autocomplete="street-address"
+                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+
+                                <div class="col-span-6">
+                                    <div class="mt-1 rounded-md">
+                                        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-4">
+                                            <button type="submit" id="submit"
+                                                class="btn btn-primary col-span-2 col-end-3 hover:bg-[#008ac6] bg-[#008ac6]">Sign
+                                                Up</button>
+                                            <a href="/" class="btn btn-primary col-span-2 hover:bg-[#008ac6] bg-[#008ac6]"><button
+                                                    type="submit" id="submit">Login</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleFileChange(input) {
+            const svgIcon = input.previousElementSibling.querySelector('svg');
+            const fileName = input.files[0]?.name || 'Choose a file';
+
+            // Update the SVG icon or perform any other actions based on the file
+            console.log(`Selected file: ${fileName}`);
+        }
+    </script>
+
+</body>
+
+</html>
